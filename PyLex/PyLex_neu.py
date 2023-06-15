@@ -95,8 +95,8 @@ while 1:
     dlg.addField('Age Group:', choices=["2","3","4"], initial = childAge) # adds a dropdown field for age group with default value of childAge
     dlg.addField('Language:', choices=language_list, initial = "swiss_german") # adds a dropdown field for language with default value of "swiss_german"
     dlg.addField('Reference Language?', initial = True) # adds a checkbox field for choosing reference language with default value of True
-    dlg.addField('Screen flipped?', initial = False) # adds a checkbox field for choosing screen orientation with default value of False
-    dlg.addField('Touchscreen', initial = False) # adds a checkbox field for choosing input device with default value of False
+    dlg.addField('Screen flipped?', initial = True) # adds a checkbox field for choosing screen orientation with default value of False
+    dlg.addField('Touchscreen', initial = True) # adds a checkbox field for choosing input device with default value of False
     subject_details = dlg.show() # displays the dialog and stores the input values in subject_details
     if dlg.OK == False:
         core.quit()  # exits the program if user pressed cancel
