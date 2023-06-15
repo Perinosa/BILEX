@@ -11,7 +11,7 @@ If you publish work using this script the most relevant publication is:
 
 """
 #Child Id und Altersgruppe kann zur Vorbereitung hier eingegeben werden
-childID = 11111
+childID = 12345
 #ganze Zahl eingeben, Auswahl: 2, 3 oder 4
 childAge = 2
 
@@ -54,9 +54,11 @@ expInfo = {
     'session': '001',
 }
 language_list = os.listdir("sound_files")
-exclude = ["arabic", ".DS_Store", "luxembourg_german", "finnish"] #exclude certain languages from being used (if for example not all sound files are present)
+exclude = ["arabic", ".DS_Store"] #exclude certain languages from being used (if for example not all sound files are present)
 language_list = [x for x in language_list if x not in exclude]
-language_list = sorted(language_list) #sort list alphabatically
+language_list = sorted(language_list) #sort list alphabetically
+language_list = sorted(language_list, key=lambda x: x not in ['american_english', 'french', 'spanish', 'italian'])
+ 
 
 # check if childID is a string
 if not isinstance(childID, str):
